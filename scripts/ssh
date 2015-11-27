@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# use the public (non-changing) address for SSH
+exec v6pub /usr/bin/ssh "$@"
