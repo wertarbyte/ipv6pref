@@ -7,15 +7,20 @@ else
 	echo "Unable to preload library '$LIB'" >&2
 fi
 
+dbg() {
+	[ "${IPV6PREF_DEBUG:-}" ] || return
+	echo "ipv6pref:" "$@" >&2
+}
+
 WRAPPER="$(basename $0)"
 
 case "$WRAPPER" in
 	v6pub)
-		[ "${IPV6PREF_DEBUG:-0}" -eq 1 ] && echo "ipv6pref: Using public address" >&2
+		dbg "Using public address"
 		export IPV6PREF_ADDR="pub"
 		;;
 	v6tmp)
-		[ "${IPV6PREF_DEBUG:-0}" -eq 1 ] && echo "ipv6pref: Using temporary address" >&2
+		dbg "Using temporary address"
 		export IPV6PREF_ADDR="tmp"
 		;;
 esac
