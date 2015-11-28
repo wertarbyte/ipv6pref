@@ -1,4 +1,12 @@
 #!/bin/sh
+#
+# Wrapper script to advice ssh to use the public, non-temporary IPv6 addresses
+# (without privacy extensions) for outgoing connections
+#
+# It uses the ipv6pref library and its wrapper scripts.
+#
+# By Stefan Tomanek <stefan.tomanek@wertarbyte.de>
+# https://github.com/wertarbyte/ipv6pref/
 
 # use the public (non-changing) address for SSH
 exec v6pub /usr/bin/ssh "$@"

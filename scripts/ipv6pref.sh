@@ -1,4 +1,12 @@
 #!/bin/sh
+#
+# Wrapper script to advice programs to use the temporary or public IPv6 addresses
+#
+# Symlink to "v6tmp" and "v6pub" and adjust library location
+#
+# By Stefan Tomanek <stefan.tomanek@wertarbyte.de>
+#    https://github.com/wertarbyte/ipv6pref/
+
 LIB=/usr/local/lib/ipv6pref.so
 
 dbg() {
