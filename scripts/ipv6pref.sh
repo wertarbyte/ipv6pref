@@ -12,17 +12,19 @@ dbg() {
 	echo "ipv6pref:" "$@" >&2
 }
 
-WRAPPER="$(basename $0)"
+if ! [ "${IPV6PREF_WAS_HERE:-}" ]; then
+	WRAPPER="$(basename $0)"
+	PREF=""
+	case "$WRAPPER" in
+		v6pub)
+			dbg "Using public address"
+			export IPV6PREF_ADDR="pub"
+			;;
+		v6tmp)
+			dbg "Using temporary address"
+			export IPV6PREF_ADDR="tmp"
+			;;
+	esac
+fi
 
-case "$WRAPPER" in
-	v6pub)
-		dbg "Using public address"
-		export IPV6PREF_ADDR="pub"
-		;;
-	v6tmp)
-		dbg "Using temporary address"
-		export IPV6PREF_ADDR="tmp"
-		;;
-esac
-
-exec "$@"
+IPV6PREF_WAS_HERE=1 exec "$@"
