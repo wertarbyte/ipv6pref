@@ -1,0 +1,21 @@
+Source: ipv6pref
+Section: utils
+Priority: extra
+Maintainer: Stefan Tomanek <stefan.tomanek+debian@wertarbyte.de>
+Build-Depends: debhelper (>= 9), dh-exec
+Standards-Version: 3.9.8
+Homepage: https://github.com/wertarbyte/ipv6pref
+Vcs-Git: https://github.com/wertarbyte/ipv6pref.git
+Vcs-Browser: https://github.com/wertarbyte/ipv6pref
+
+Package: ipv6pref
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: utility to set IPv6 address preferences
+ ipv6pref provides a utility that preloads a library and
+ allows users to control the use of IPv6 privacy extensions.
+ .
+ For longrunning tasks it may be undesirable to use the periodically
+ changing and random addresses; using the supplied utility,
+ the kernel can be instructed whether to prefer the temporary addresses
+ or stick to the static ones when opening sockets for a specific program.

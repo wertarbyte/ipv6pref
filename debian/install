@@ -1,0 +1,3 @@
+#!/usr/bin/dh-exec
+ipv6pref.so /usr/lib/ipv6pref/
+scripts/ipv6pref.sh => /usr/bin/ipv6pref

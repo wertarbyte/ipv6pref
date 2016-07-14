@@ -1,0 +1,2 @@
+version=3
+https://github.com/wertarbyte/ipv6pref/tags .*/archive/release/(.*)\.tar\.gz

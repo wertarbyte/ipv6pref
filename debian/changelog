@@ -1,0 +1,5 @@
+ipv6pref (1.0.2-1) unstable; urgency=low
+
+  * Initial packaging of upstream release 1.0.2 (Closes: #831427)
+
+ -- Stefan Tomanek <stefan.tomanek+debian@wertarbyte.de>  Sun, 17 Jul 2016 22:00:00 +0200
