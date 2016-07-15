@@ -1,0 +1,30 @@
+=pod
+
+=head1 NAME
+
+ipv6pref -- set IPv6 address selection preference
+
+=head1 SYNOPSIS
+
+B<ipv6pref> F<< <cmd> >>
+
+B<v6pub> F<< <cmd> >>
+
+B<v6tmp> F<< <cmd> >>
+
+=head1 DESCRIPTION
+
+=over
+
+This program is a wrapper script that preloads the ipv6pref library, allowing the user
+to select its preference for the IPv6 address selection. It is usually called using the
+symlinks B<v6pub> or B<v6tmp> that advice the supplied command to use either the public
+IPv6 address for outgoing connections or the temporary address assigned when using the
+IPv6 Privacy Extensions.
+
+=back
+
+=head1 AUTHOR
+
+Stefan Tomanek E<lt>stefan.tomanek@wertarbyte.deE<gt>
+
