@@ -6,6 +6,10 @@
 #
 # By Stefan Tomanek <stefan.tomanek@wertarbyte.de>
 #    https://github.com/wertarbyte/ipv6pref/
+#
+# You have permission to copy, modify, and redistribute under the
+# terms of the GPLv3 or any later version.
+# For full license terms, see COPYING.
 
 LIB_NAME="ipv6pref/ipv6pref.so"
 # directories to search for the library
