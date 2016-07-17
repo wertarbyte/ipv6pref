@@ -35,12 +35,11 @@ find_lib() {
 if ! [ "${IPV6PREF_WAS_HERE:-}" ]; then
 	# locate the library
 	LIB="$(find_lib)"
-	if [ -e "$LIB" ]; then
+	if [ "$?" -eq 0 ]; then
 		export LD_PRELOAD="${LIB} ${LD_PRELOAD}"
 	fi
 
 	WRAPPER="$(basename $0)"
-	PREF=""
 	case "$WRAPPER" in
 		v6pub)
 			dbg "Using public address"
