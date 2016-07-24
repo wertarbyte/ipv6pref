@@ -2,14 +2,14 @@ Source: ipv6pref
 Section: utils
 Priority: extra
 Maintainer: Stefan Tomanek <stefan.tomanek+debian@wertarbyte.de>
-Build-Depends: debhelper (>= 9), dh-exec
+Build-Depends: debhelper (>= 9), dh-exec, linux-libc-dev
 Standards-Version: 3.9.8
 Homepage: https://github.com/wertarbyte/ipv6pref
 Vcs-Git: https://github.com/wertarbyte/ipv6pref.git
 Vcs-Browser: https://github.com/wertarbyte/ipv6pref
 
 Package: ipv6pref
-Architecture: any
+Architecture: linux-any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: utility to set IPv6 address preferences
  ipv6pref provides a utility that preloads a library and
