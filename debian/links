@@ -2,3 +2,5 @@ usr/bin/ipv6pref usr/bin/v6pub
 usr/bin/ipv6pref usr/bin/v6tmp
 usr/share/man/man1/ipv6pref.1 usr/share/man/man1/v6pub.1 
 usr/share/man/man1/ipv6pref.1 usr/share/man/man1/v6tmp.1 
+usr/share/bash-completion/completions/ipv6pref usr/share/bash-completion/completions/v6pub
+usr/share/bash-completion/completions/ipv6pref usr/share/bash-completion/completions/v6tmp

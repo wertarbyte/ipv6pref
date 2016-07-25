@@ -1,3 +1,4 @@
 #!/usr/bin/dh-exec
 ipv6pref.so /usr/lib/ipv6pref/
+bash_completion/ipv6pref /usr/share/bash-completion/completions/
 scripts/ipv6pref.sh => /usr/bin/ipv6pref
