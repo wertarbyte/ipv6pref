@@ -6,7 +6,7 @@ ipv6pref -- set IPv6 address selection preference
 
 =head1 SYNOPSIS
 
-B<ipv6pref> F<< <cmd> >>
+B<ipv6pref> [B<-p> | B<-t>] F<< <cmd> >>
 
 B<v6pub> F<< <cmd> >>
 
@@ -21,6 +21,23 @@ to select its preference for the IPv6 address selection. It is usually called us
 symlinks B<v6pub> or B<v6tmp> that advice the supplied command to use either the public
 IPv6 address for outgoing connections or the temporary address assigned when using the
 IPv6 Privacy Extensions.
+
+=back
+
+=head1 OPTIONS
+
+=over
+
+=item B<-p>
+
+Instruct the called program to use the public IPv6 address for outgoing
+connections. This is the default if the wrapper is called by the name B<v6pub>.
+
+=item B<-t>
+
+Instruct the called program to use the temporary, randomly generated IPv6
+addresses for outgoing connections. This is the default if the wrapper is
+called by the name B<v6tmp>.
 
 =back
 

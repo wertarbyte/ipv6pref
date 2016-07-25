@@ -39,17 +39,32 @@ if ! [ "${IPV6PREF_WAS_HERE:-}" ]; then
 		export LD_PRELOAD="${LIB} ${LD_PRELOAD}"
 	fi
 
+	# check wrapper name
 	WRAPPER="$(basename $0)"
 	case "$WRAPPER" in
 		v6pub)
-			dbg "Using public address"
+			dbg "Using public address by default"
 			export IPV6PREF_ADDR="pub"
 			;;
 		v6tmp)
-			dbg "Using temporary address"
+			dbg "Using temporary address by default"
 			export IPV6PREF_ADDR="tmp"
 			;;
 	esac
+	# check for argument
+	case "${1:-}" in
+		"-p")
+			dbg "Using public address"
+			export IPV6PREF_ADDR="pub"
+			shift
+			;;
+		"-t")
+			dbg "Using temporary address"
+			export IPV6PREF_ADDR="tmp"
+			shift
+			;;
+	esac
+
 fi
 
 IPV6PREF_WAS_HERE=1 exec "$@"

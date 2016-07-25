@@ -1,9 +1,18 @@
 # bash completion for ipv6pref(1)
 
 _ipv6pref() {
+	local cur prev words cword
 	_init_completion || return
 
 	for (( i=1; i <= COMP_CWORD; i++ )); do
-		_command_offset $i
+		if [[ ${COMP_WORDS[i]} != -* ]]; then
+			_command_offset $i
+			return
+		fi
 	done
-} && complete -F _ipv6pref ipv6pref v6pub v6tmp
+	if [[ "$cur" == -* ]]; then
+		COMPREPLY=( $( compgen -W '-p -t' -- "$cur" ) )
+		return
+	fi
+
+} && complete -F _ipv6pref ipv6pref.sh ipv6pref v6pub v6tmp
