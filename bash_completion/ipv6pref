@@ -1,0 +1,9 @@
+# bash completion for ipv6pref(1)
+
+_ipv6pref() {
+	_init_completion || return
+
+	for (( i=1; i <= COMP_CWORD; i++ )); do
+		_command_offset $i
+	done
+} && complete -F _ipv6pref ipv6pref v6pub v6tmp
