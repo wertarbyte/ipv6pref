@@ -1,3 +1,11 @@
+ipv6pref (1.0.3-1) unstable; urgency=medium
+
+  * update to upstream version 1.0.3
+  * limit supported architectures to Linux
+  * install bash completion file
+
+ -- Stefan Tomanek <stefan.tomanek+debian@wertarbyte.de>  Tue, 26 Jul 2016 08:16:21 +0200
+
 ipv6pref (1.0.2-1) unstable; urgency=low
 
   * Initial packaging of upstream release 1.0.2 (Closes: #831427)
