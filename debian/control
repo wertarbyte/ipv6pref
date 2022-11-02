@@ -1,6 +1,6 @@
 Source: ipv6pref
 Section: utils
-Priority: extra
+Priority: optional
 Maintainer: Stefan Tomanek <stefan.tomanek+debian@wertarbyte.de>
 Build-Depends: debhelper-compat (= 13), dh-exec, linux-libc-dev
 Standards-Version: 3.9.8
