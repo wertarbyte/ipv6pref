@@ -3,6 +3,7 @@ ipv6pref (1.0.3-2) UNRELEASED; urgency=medium
   * Trim trailing whitespace.
   * Use secure copyright file specification URI.
   * Update watch file format version to 4.
+  * Bump debhelper from deprecated 9 to 13.
 
  -- Debian Janitor <janitor@jelmer.uk>  Wed, 02 Nov 2022 01:10:58 -0000
 
