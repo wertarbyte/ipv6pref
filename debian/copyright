@@ -1,4 +1,4 @@
-Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: ipv6pref
 Maintainer-Contact: Stefan Tomanek <stefan.tomanek+debian@wertarbyte.de>
 Source: https://github.com/wertarbyte/ipv6pref
